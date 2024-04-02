@@ -14,9 +14,9 @@ def pre_transform(input):
     transformed_input = img_array.tolist()
     print("Custom pre transformation done")
     print(str(transformed_input)[:20], "...", str(transformed_input)[-20:])
-    return transformed_input
+#
 
-def post_transform(input):
+def post_trans(input):
     print("In Custom post_transform method")
     print(str(input)[:20], "...", str(input)[-20:])
     class_names = ['daisy', 'dandelion', 'roses', 'sunflowers', 'tulips']
@@ -30,5 +30,4 @@ def post_transform(input):
     print(str(processed_response)[:200], "...", str(processed_response)[-200:])
     print(class_name)
     print(confidence)
-    return processed_response
 
