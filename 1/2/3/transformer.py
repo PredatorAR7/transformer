@@ -4,6 +4,7 @@ from PIL import Image
 from io import BytesIO
 import tensorflow as tf
 import base64
+from boto3 import Session
 
 def pre_transform(input):
     print("In Custom pre_transform method")
@@ -14,7 +15,7 @@ def pre_transform(input):
     transformed_input = img_array.tolist()
     print("Custom pre transformation done")
     print(str(transformed_input)[:20], "...", str(transformed_input)[-20:])
-    # return transformed_input
+    return transformed_input
 #
 
 def post_transform(input):
