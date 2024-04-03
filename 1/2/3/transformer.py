@@ -4,7 +4,6 @@ from PIL import Image
 from io import BytesIO
 import tensorflow as tf
 import base64
-from boto3 import Session
 
 def pre_transform(input):
     print("In Custom pre_transform method")
