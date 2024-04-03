@@ -14,7 +14,7 @@ def pre_transform(input):
     transformed_input = img_array.tolist()
     print("Custom pre transformation done")
     print(str(transformed_input)[:20], "...", str(transformed_input)[-20:])
-    return transformed_input
+    # return transformed_input
 #
 
 def post_transform(input):
