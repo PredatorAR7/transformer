@@ -10,7 +10,7 @@ def softmax(x):
    return e_x / e_x.sum(axis=0)
 
 
-def pre_transform(input):
+def transform(input):
    print("In Custom pre_transform method")
    # Displaying initial part of the input for debugging
    print(str(input)[:20], "...", str(input)[-20:])
@@ -22,7 +22,7 @@ def pre_transform(input):
    print("Custom pre transformation done")
    # Displaying initial part of the transformed input for debugging
    print(str(transformed_input)[:20], "...", str(transformed_input)[-20:])
-   transformed_input
+   return transformed_input
 
 
 
