@@ -22,7 +22,7 @@ def pre_transform(input):
    print("Custom pre transformation done")
    # Displaying initial part of the transformed input for debugging
    print(str(transformed_input)[:20], "...", str(transformed_input)[-20:])
-   return transformed_input
+   transformed_input
 
 
 
