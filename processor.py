@@ -11,7 +11,6 @@ def softmax(x):
 
 
 def pre_process(input):
-   print("In Custom pre_transform method")
    # Displaying initial part of the input for debugging
    img_height = 180
    img_width = 180
