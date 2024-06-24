@@ -13,15 +13,12 @@ def softmax(x):
 def pre_process(input):
    print("In Custom pre_transform method")
    # Displaying initial part of the input for debugging
-   print(str(input)[:20], "...", str(input)[-20:])
    img_height = 180
    img_width = 180
    # Decode the input, load as an image, resize, and convert to a NumPy array
    img_array = np.array(Image.open(BytesIO(base64.b64decode(input))).resize((img_height, img_width)))
    transformed_input = img_array.tolist()
-   print("Custom pre transformation done")
    # Displaying initial part of the transformed input for debugging
-   print(str(transformed_input)[:20], "...", str(transformed_input)[-20:])
    return transformed_input
 
 
