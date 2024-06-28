@@ -16,7 +16,7 @@ def softmax(x):
    return e_x / e_x.sum(axis=0)
 
 
-def pre(input):
+def pre_process(input):
    # Displaying initial part of the input for debugging
    img_height = 180
    img_width = 180
