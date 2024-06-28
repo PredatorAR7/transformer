@@ -2,6 +2,12 @@ import numpy as np
 from PIL import Image
 from io import BytesIO
 import base64
+from vipas.model import ModelClient as Client
+from vipas import model
+
+
+abc = model.ModelClient()
+abc.predict("model","input")
 
 
 def softmax(x):
