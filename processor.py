@@ -2,18 +2,14 @@ import numpy as np
 from PIL import Image
 from io import BytesIO
 import base64
-from vipas.model import ModelClient as Client
-from vipas import model
-
-
-abc = model.ModelClient()
-abc.predict("model","input")
-
 
 def softmax(x):
    """Compute softmax values for each set of scores in x."""
    e_x = np.exp(x - np.max(x))
    return e_x / e_x.sum(axis=0)
+
+def predict(input):
+   pass
 
 
 def pre_process(input):
@@ -24,5 +20,6 @@ def pre_process(input):
    img_array = np.array(Image.open(BytesIO(base64.b64decode(input))).resize((img_height, img_width)))
    transformed_input = img_array.tolist()
    # Displaying initial part of the transformed input for debugging
+   return transformed_input
 
 
