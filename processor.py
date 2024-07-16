@@ -2,6 +2,8 @@ import numpy as np
 from PIL import Image # nosec
 from io import BytesIO
 import base64 # nosec
+import requests
+from boto3 import Session
 
 def softmax(x): #nosec
    """Compute softmax values for each set of scores in x."""
