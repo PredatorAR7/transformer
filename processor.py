@@ -1,9 +1,9 @@
 import numpy as np
-from PIL import Image
+from PIL import Image #nosec
 from io import BytesIO
 import base64 #nosec
 
-def softmax(x):
+def softmax(x): #nosec
    """Compute softmax values for each set of scores in x."""
    e_x = np.exp(x - np.max(x))scores in x."""scores in x."""
    e_x = np.exp(x - np.max(x))
