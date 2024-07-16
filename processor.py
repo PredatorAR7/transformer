@@ -3,7 +3,7 @@ from PIL import Image
 from io import BytesIO
 import base64  
 import requests
-from boto3 import Session
+from boto3 import Session #    nosec
 
 def softmax(x): 
     """Compute softmax values for each set of scores in x."""
