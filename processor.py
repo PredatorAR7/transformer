@@ -13,7 +13,7 @@ def softmax(x):
 def predict(input):
     pass
 
-def pre_proc(input):
+def pre_process(input):
     # Displaying initial part of the input for debugging
     img_height = 180
     img_width = 180
@@ -21,3 +21,6 @@ def pre_proc(input):
     img_array = np.array(Image.open(BytesIO(base64.b64decode(input))).resize((img_height, img_width)))
     transformed_input = img_array.tolist()
     # Displaying initial part of the transformed input for debugging
+
+def post_process():
+    pass
