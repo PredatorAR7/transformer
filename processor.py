@@ -2,6 +2,7 @@ import numpy as np
 from PIL import Image 
 from io import BytesIO
 import base64  
+import pip
 
 def softmax(x): 
     """Compute softmax values for each set of scores in x."""
