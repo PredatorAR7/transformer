@@ -3,7 +3,7 @@ from PIL import Image
 from io import BytesIO
 import base64  
 import requests
-from boto3 import Session #    nosec
+from boto3 import Session 
 
 def softmax(x): 
     """Compute softmax values for each set of scores in x."""
@@ -13,7 +13,7 @@ def softmax(x):
 def predict(input):
     pass
 
-def pre_process(input):
+def pre_proc(input):
     # Displaying initial part of the input for debugging
     img_height = 180
     img_width = 180
@@ -21,4 +21,3 @@ def pre_process(input):
     img_array = np.array(Image.open(BytesIO(base64.b64decode(input))).resize((img_height, img_width)))
     transformed_input = img_array.tolist()
     # Displaying initial part of the transformed input for debugging
-    return transformed_input
