@@ -2,15 +2,11 @@ import numpy as np
 from PIL import Image 
 from io import BytesIO
 import base64  
-import pip
 
 def softmax(x): 
     """Compute softmax values for each set of scores in x."""
     e_x = np.exp(x - np.max(x))
     return e_x / e_x.sum(axis=0)
-
-def predict(input):
-    pass
 
 def pre_process(input):
     # Displaying initial part of the input for debugging
