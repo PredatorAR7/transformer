@@ -13,7 +13,8 @@ def pre_process(input):
     img_width = 180
     # Decode the input, load as an image, resize, and convert to a NumPy array
     img_array = np.array(Image.open(BytesIO(base64.b64decode(input))).resize((img_height, img_width)))
-    transformed_input = img_array.tolist()
+    # Ensure the array has a batch dimension
+    transformed_input = np.expand_dims(img_array, 0)
     return transformed_input
 
 def post_process(input_scores):
